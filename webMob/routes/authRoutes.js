@@ -11,17 +11,4 @@ router.post('/login', login);
 
 router.get('/profile', auth, profile);
 
-const authenticateToken = (req, res, next) => {
-    // Verify token logic here
-    // Example: check if req.headers.authorization contains a valid JWT token
-    // If token is valid, call next(); otherwise, return 401 Unauthorized
-    next();
-};
-
-// Protected route definition
-router.get('/auth/protected-route', authenticateToken, (req, res) => {
-    // Route logic here for protected resource
-    res.status(200).json({ message: 'Access to protected route granted!' });
-});
-
 export default router;
