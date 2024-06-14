@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 // Function to hash a password asynchronously
 exports.hashPassword = async (password) => {
     try {
-        const salt = await bcrypt.genSalt(10);  // Generate a salt with 10 rounds
+        const salt = await bcrypt.genSalt(10); 
         const hashedPassword = await bcrypt.hash(password, salt);
         return hashedPassword;
     } catch (error) {
