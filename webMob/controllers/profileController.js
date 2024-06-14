@@ -1,5 +1,5 @@
-// controllers/profileController.js
-import {dbConfig} from '../config/dbConfig.js'; // Ensure this is your MySQL connection
+
+import {dbConfig} from '../config/dbConfig.js';
 
 export const profile = (req, res) => {
     if (!req.user || !req.user.id) {
